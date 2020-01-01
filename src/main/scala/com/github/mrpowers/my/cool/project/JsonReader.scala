@@ -5,7 +5,7 @@ import org.json4s.jackson.JsonMethods._
 
 object JsonReader extends App {
 
-  val spark = SparkSession.builder().master("local").getOrCreate()
+  val spark = SparkSession.builder().appName("Json Reader").master("local[*]").getOrCreate()
   val sc = spark.sparkContext
   implicit val formats = DefaultFormats
 
