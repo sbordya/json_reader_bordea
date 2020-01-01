@@ -3,8 +3,8 @@
 This program parallely reads json file with spark and outputs parsed 
 objects to the command line. As a template was used 
 `MrPowers/spark-sbt.g8` project. You can get it with the following command:
-```
-sbt new MrPowers/spark-sbt.g8
+```console
+$ sbt new MrPowers/spark-sbt.g8
 ```
 
 ### How to install
@@ -15,20 +15,24 @@ You will also need to download the
 [json file](https://storage.googleapis.com/otus_sample_data/winemag-data.json.tgz) 
 with objects.
 Then clone the repository:
-```
-git clone git@github.com:sbordya/json_reader_bordea.git
+```console
+$ git clone git@github.com:sbordya/json_reader_bordea.git
 ```
 Navigate to the project folder and prepare a jar file with dependencies
 (you will be able to see it under the path 
 `<path_to_project>/target/scala-2.11/json_reader_bordea-assembly-0.0.1.jar`):
-```
-sbt assembly
+```console
+$ sbt assembly
 ```
 Now you are ready to run the program:
-```
-<path_to_spark>/bin/spark-submit --master local[*] --class com.github.mrpowers.my.cool.project.JsonReader <path_to_project>/target/scala-2.11/json_reader_bordea-assembly-0.0.1.jar <path_to_json_file>
+```console
+$ <path_to_spark>/bin/spark-submit --master local[*] --class com.github.mrpowers.my.cool.project.JsonReader <path_to_project>/target/scala-2.11/json_reader_bordea-assembly-0.0.1.jar <path_to_json_file>
 ```
 
+If you want to see the graph of dependencies, you can run:
+```console
+$ sbt dependencyBrowseGraph
+```
 ### Project Goals
 
 This program was created during the 
