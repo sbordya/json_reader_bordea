@@ -18,11 +18,11 @@ object JsonReader extends App {
 }
 
 case class Wine(
-  id: Option[Int],
-  country: Option[String],
-  points: Option[Int],
-  price: Option[Double],
-  title: Option[String],
-  variety: Option[String],
-  winery: Option[String]
+  id: Option[Int] = None,
+  country: Option[String] = None,
+  points: Option[Int] = None,
+  price: Option[Double] = None,
+  title: Option[String] = None,
+  variety: Option[String] = None,
+  winery: Option[String] = None
 )
