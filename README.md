@@ -26,7 +26,7 @@ $ sbt assembly
 ```
 Now you are ready to run the program:
 ```console
-$ <path_to_spark>/bin/spark-submit --master local[*] --class com.github.mrpowers.my.cool.project.JsonReader <path_to_project>/target/scala-2.11/json_reader_bordea-assembly-0.0.1.jar <path_to_json_file>
+$ <path_to_spark>/bin/spark-submit --master local[*] --class com.example.JsonReader <path_to_project>/target/scala-2.11/json_reader_bordea-assembly-0.0.1.jar <path_to_json_file>
 ```
 
 If you want to see the graph of dependencies, you can run:

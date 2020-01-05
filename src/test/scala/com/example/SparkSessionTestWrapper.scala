@@ -1,4 +1,4 @@
-package com.github.mrpowers.my.cool.project
+package com.example
 
 import org.apache.spark.sql.SparkSession
 
