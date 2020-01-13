@@ -14,7 +14,6 @@ object JsonReader extends App {
 
   sc.textFile(filepath)
     .map(parse(_).extract[Wine])
-    .collect()
     .foreach{println _}
 }
 
